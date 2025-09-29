@@ -4,8 +4,9 @@ use std::{
     path::Path,
 };
 
-const PAGE_SIZE: usize = 4096;
+pub const PAGE_SIZE: usize = 4096;
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct PageId(pub u64);
 
 pub struct DiskManager {
